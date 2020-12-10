@@ -1,0 +1,15 @@
+enum EventType {
+  REWARD
+  STAKE
+  WITHDRAWAL
+}
+
+type zGovernanceEvent @entity {
+  id: ID! 
+  txHash: Bytes!
+  amount: BigInt!
+  user: Bytes!
+  eventType: EventType!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+}
